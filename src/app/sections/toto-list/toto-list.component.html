@@ -1,0 +1,20 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nom</th>
+      <th scope="col">Contenu</th>
+      <th scope="col">Modifier</th>
+      <th scope="col">Supprimer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let todo of todos">
+      <th scope="row">{{todo.id}}</th>
+      <td>{{todo.name}}</td>
+      <td>{{todo.content}}</td>
+      <td><button class="btn btn-success" (click)="selected.emit(todo)">Update</button></td>
+      <td><button class="btn btn-danger" (click)="deleted.emit(todo);$event.stopImmediatePropagation();">Delete</button></td>
+    </tr>
+  </tbody>
+</table>

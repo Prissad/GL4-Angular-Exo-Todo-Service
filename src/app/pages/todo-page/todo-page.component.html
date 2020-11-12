@@ -1,0 +1,29 @@
+<div class="text-center">
+  <h1>Todo List</h1>
+</div>
+<div class="row">
+  <div class="col-6 card">
+    <div class="card-header text-center">
+      <h3>List</h3>
+    </div>
+    <div class="card-body">
+      <app-toto-list
+        [todos]="todos"
+        (deleted)="deleteTodo($event)"
+        (selected)="selectTodo($event)">
+      </app-toto-list>
+    </div>
+  </div>
+  <div class="col-6 card">
+    <div class="card-header text-center">
+      <h3>Ajouter / Modifier</h3>
+    </div>
+    <div class="card-body">
+      <app-toto-adder
+        [selectedTodo]="selectedTodo"
+        (saved)="saveTodo($event)"
+        (cancelled)="cancel()">
+      </app-toto-adder>
+    </div>
+  </div>
+</div>
