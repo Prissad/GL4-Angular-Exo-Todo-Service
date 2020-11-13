@@ -8,9 +8,9 @@ export class TodoService {
   todos;
   constructor() {
     this.todos = [
-      new Todo("Travailler","Faire mes tâches"),
-      new Todo("Projets","Faire mes projets"),
-      new Todo("Repeat","Refaire les deux")
+      new Todo("Lundi","Faire du Sport"),
+      new Todo("Mardi","Avancer dans mes projets"),
+      new Todo("Jeudi","Lire un livre")
     ];
   }
 
